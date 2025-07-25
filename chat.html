@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPcoding - Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+    <div id="side-panel">
+        <div class="panel-header">
+            <h3>Menu</h3>
+            <button id="close-menu-btn">×</button>
+        </div>
+        <div class="panel-content">
+            <h4>History</h4>
+            <div class="history-item">Chat from 10:32 PM</div>
+            <div class="history-item">Debug session: Python script</div>
+            <p class="placeholder-text">(History is a visual placeholder)</p>
+            
+            <hr>
+            
+            <h4>Settings</h4>
+            <div class="setting-item">
+                <span>Dark Mode</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-switch-checkbox">
+                   <sp an class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>More Options</span>
+                <span class="placeholder-text">coming soon</span>
+            </div>
+
+            <hr>
+            
+            <a href="about.html" class="panel-link">About ESPcoding</a>
+            <a href="index.html" class="panel-link">Return Home</a>
+        </div>
+    </div>
+    <div id="main-content-overlay"></div>
+
+
+    <div id="chat-container">
+        <div id="chat-header">
+            <a href="index.html" class="logo">ESP<span>coding</span></a>
+        </div>
+        <div id="chat-log">
+            <!-- Welcome Message -->
+            <div class="message ai-message">
+                <img src="https://i.ibb.co/6g6y5Vz/ai-icon.png" alt="AI" class="avatar">
+                <div class="text">Hello! I'm ESPcoding AI. How can I help you with your code today?</div>
+            </div>
+        </div>
+        <div id="chat-input-area">
+            <form id="chat-form">
+                <button type="button" id="menu-btn" title="Open Menu">☰</button>
+                <label for="file-upload" class="file-upload-label" title="Upload Image">
+                    📎
+                    <input type="file" id="file-upload" accept="image/*">
+                </label>
+                <textarea id="user-input" placeholder="Ask anything about code..." rows="1"></textarea>
+                <button type="submit" id="send-btn" title="Send">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
